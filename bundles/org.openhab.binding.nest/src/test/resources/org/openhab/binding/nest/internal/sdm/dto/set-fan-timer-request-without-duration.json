@@ -1,6 +1,0 @@
-{
-  "command": "sdm.devices.commands.Fan.SetTimer",
-  "params": {
-    "timerMode": "ON"
-  }
-}

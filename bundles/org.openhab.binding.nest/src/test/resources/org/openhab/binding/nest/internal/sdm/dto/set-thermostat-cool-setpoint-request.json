@@ -1,6 +1,0 @@
-{
-  "command": "sdm.devices.commands.ThermostatTemperatureSetpoint.SetCool",
-  "params": {
-    "coolCelsius": 20.0
-  }
-}

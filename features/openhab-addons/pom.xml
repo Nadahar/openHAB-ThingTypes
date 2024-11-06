@@ -46,9 +46,6 @@
                   <header file="src/main/resources/header.xml" filtering="no"/>
                   <fileset dir="${basedirRoot}/bundles">
                     <include name="*/src/main/feature/feature.xml"/>
-                    <exclude name="**/org.openhab.binding.bluetooth*/**/feature.xml"/>
-                    <exclude name="**/org.openhab.binding.modbus*/**/feature.xml"/>
-                    <exclude name="**/org.openhab.binding.mqtt*/**/feature.xml"/>
                   </fileset>
                   <filterchain>
                     <linecontainsRegExp>
@@ -71,9 +68,6 @@
             <id>karaf-feature-verification</id>
             <configuration>
               <features>
-                <feature>openhab-binding-bluetooth</feature>
-                <feature>openhab-binding-modbus</feature>
-                <feature>openhab-binding-mqtt</feature>
               </features>
             </configuration>
           </execution>

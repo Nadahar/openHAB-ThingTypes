@@ -1,5 +1,0 @@
-Bridge adorne:hub:home "Adorne Hub" {
-	switch bathroom "Bathroom" [zoneId=0]
-	dimmer bedroom1 "Bedroom1" [zoneId=1]
-	dimmer bedroom2 "Bedroom2" [zoneId=2]
-}
