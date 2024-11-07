@@ -11,12 +11,12 @@
 
   <groupId>org.openhab.addons</groupId>
   <artifactId>org.openhab.addons.reactor</artifactId>
-  <version>4.3.0-SNAPSHOT</version>
+  <version>4.3.0</version>
 
   <packaging>pom</packaging>
 
-  <name>openHAB Add-ons</name>
-  <description>This project contains the official add-ons of openHAB</description>
+  <name>openHAB Thing Types Service</name>
+  <description>This project contains the Thing Types Service add-on for openHAB</description>
 
   <organization>
     <name>openHAB.org</name>
@@ -38,15 +38,15 @@
   </modules>
 
   <scm>
-    <connection>scm:git:https://github.com/openhab/openhab-addons.git</connection>
-    <developerConnection>scm:git:https://github.com/openhab/openhab-addons.git</developerConnection>
+    <connection>scm:git:https://github.com/Nadahar/openHAB-ThingTypes.git</connection>
+    <developerConnection>scm:git:https://github.com/Nadahar/openHAB-ThingTypes.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/openhab/openhab-addons</url>
+    <url>https://github.com/Nadahar/openHAB-ThingTypes</url>
   </scm>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/openhab/openhab-addons/issues</url>
+    <url>https://github.com/Nadahar/openHAB-ThingTypes/issues</url>
   </issueManagement>
 
   <distributionManagement>
@@ -66,7 +66,8 @@
     <oh.java.version>17</oh.java.version>
     <maven.compiler.release>${oh.java.version}</maven.compiler.release>
 
-    <ohc.version>4.3.0-SNAPSHOT</ohc.version>
+    <thingtypes.version>1.0.0-SNAPSHOT</thingtypes.version>
+    <ohc.version>4.3.0</ohc.version>
     <bnd.version>7.0.0</bnd.version>
     <commons.net.version>3.9.0</commons.net.version>
     <eea.version>2.4.0</eea.version>
@@ -443,7 +444,7 @@ Import-Package: \\
             <strictCheck>true</strictCheck>
             <aggregate>true</aggregate>
             <mapping>
-              <java>JAVADOC_STYLE</java>
+              <java>SLASHSTAR_STYLE</java>
               <xml>xml-header-style</xml>
             </mapping>
             <useDefaultExcludes>true</useDefaultExcludes>
@@ -490,6 +491,8 @@ Import-Package: \\
           <artifactId>sat-plugin</artifactId>
           <version>${sat.version}</version>
           <configuration>
+            <failOnError>true</failOnError>
+            <checkstyleRuleset>${basedirRoot}/tools/static-code-analysis/checkstyle/thingtypes.xml</checkstyleRuleset>
             <checkstyleProperties>${basedirRoot}/tools/static-code-analysis/checkstyle/ruleset.properties</checkstyleProperties>
             <checkstyleFilter>${basedirRoot}/tools/static-code-analysis/checkstyle/suppressions.xml</checkstyleFilter>
             <spotbugsExclude>${basedirRoot}/tools/static-code-analysis/spotbugs/suppressions.xml</spotbugsExclude>
@@ -594,7 +597,7 @@ Import-Package: \\
               <goals>
                 <goal>check</goal>
               </goals>
-              <phase>initialize</phase>
+              <phase>none</phase>
             </execution>
           </executions>
         </plugin>

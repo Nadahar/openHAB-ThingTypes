@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-	Copyright (c) 2010-2024 Contributors to the openHAB project
+	Mill LAN Binding, an add-on for openHAB for controlling Mill devices which
+	exposes a local REST API. Copyright (c) 2024 Nadahar
 
 	See the NOTICE file(s) distributed with this work for additional
 	information.
@@ -13,6 +14,6 @@
 	SPDX-License-Identifier: EPL-2.0
 
 -->
-<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
+<features name="${project.artifactId}-${thingtypes.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
 	<repository>mvn:org.openhab.core.features.karaf/org.openhab.core.features.karaf.openhab-core/${ohc.version}/xml/features</repository>
