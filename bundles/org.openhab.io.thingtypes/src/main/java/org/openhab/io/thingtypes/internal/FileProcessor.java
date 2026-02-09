@@ -44,8 +44,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.thoughtworks.xstream.converters.ConversionException;
-
 /**
  * Parses files from the dedicated configuration folder into {@link ThingType}s, {@link ChannelType}s and
  * {@link ChannelGroupType}s.
@@ -210,10 +208,10 @@ public class FileProcessor implements WatchEventListener {
                 logger.debug("Parsed \"{}\"", path);
             }
         } catch (MalformedURLException e) {
-            logger.error("Malformed path URL: {}", path, e);
-        } catch (ConversionException e) {
+            logger.warn("Malformed path URL: {}", path, e);
+        } catch (RuntimeException e) {
             logger.warn("Failed to parse \"{}\": {}", path, e.getMessage());
-            logger.trace("", e);
+            logger.debug("", e);
         }
     }
 
