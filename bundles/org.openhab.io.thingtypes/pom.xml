@@ -12,7 +12,7 @@
 
   <artifactId>org.openhab.io.thingtypes</artifactId>
   <!-- Keep in sync with <thingtypes.version> in repository root pom.xml -->
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
 
   <name>openHAB Add-ons :: Bundles :: Thing Types Service</name>
 </project>
