@@ -33,7 +33,7 @@ import org.osgi.service.component.annotations.Component;
  * @author Ravi Nadahar - Initial contribution
  */
 @NonNullByDefault
-@Component(immediate = true, service = { ChannelGroupTypeProvider.class, FileChannelGroupTypeProvider.class }, property = { "openhab.scope=core.xml.channelGroups" })
+@Component(immediate = true, service = { ChannelGroupTypeProvider.class, FileChannelGroupTypeProvider.class })
 public class FileChannelGroupTypeProvider implements ChannelGroupTypeProvider {
 
     // All access must be guarded by "this"

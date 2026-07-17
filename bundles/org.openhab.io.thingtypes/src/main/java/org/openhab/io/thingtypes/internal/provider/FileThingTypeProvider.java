@@ -37,7 +37,7 @@ import com.thoughtworks.xstream.converters.ConversionException;
  * @author Ravi Nadahar - Initial contribution
  */
 @NonNullByDefault
-@Component(immediate = true, service = { ThingTypeProvider.class, FileThingTypeProvider.class }, property = { "openhab.scope=core.xml.thing" })
+@Component(immediate = true, service = { ThingTypeProvider.class, FileThingTypeProvider.class })
 public class FileThingTypeProvider implements ThingTypeProvider {
 
     private final Logger logger = LoggerFactory.getLogger(FileThingTypeProvider.class);

@@ -89,7 +89,7 @@ public class FileProcessor implements WatchEventListener {
           try {
               watchPath = watchService.getWatchPath().resolve(FOLDER_NAME);
           } catch (InvalidPathException e) {
-              logger.error("Can't parse thing types - invalid config path", e);
+              logger.error("Can't parse thing types - invalid config path '{}' + '{}'", watchService.getWatchPath(), FOLDER_NAME, e);
               return;
           }
           if (Files.isDirectory(watchPath)) {
